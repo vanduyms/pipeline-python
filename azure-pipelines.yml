@@ -43,3 +43,8 @@ steps:
       pip install pytest pytest-azurepipelines
       pytest
     displayName: 'pytest'
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '$(python.version)'
+    addToPath: true
+    architecture: 'x64'
